@@ -17,7 +17,4 @@ app.use(
   })
 );
 
-console.log("Publishable Key:", process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
-console.log("Secret Key:", process.env.CLERK_SECRET_KEY);
-
 module.exports = app;

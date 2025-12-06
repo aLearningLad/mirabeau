@@ -4,6 +4,7 @@ const app = require("./app");
 
 const PORT = process.env.PORT;
 
+// upload image
 app.post("/api/v1/upload", async (req: Request, res: Response) => {
   const auth = getAuth(req);
   const token = req.headers.authorization?.split(" ")[1];
@@ -18,6 +19,11 @@ app.post("/api/v1/upload", async (req: Request, res: Response) => {
   return res
     .status(401)
     .json({ message: "User not authorized to perform this action" });
+});
+
+// get images
+app.get("/api/v1/images", (req: Request, res: Response) => {
+  console.log("GET endpoint hit");
 });
 
 app.listen(PORT, () => {
