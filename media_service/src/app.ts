@@ -16,5 +16,6 @@ app.use(
     publishableKey: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
   })
 );
+app.use(express.urlencoded({ extended: true }));
 
 module.exports = app;
